@@ -12,8 +12,9 @@ public class Home extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         lblRut = new javax.swing.JLabel();
@@ -35,11 +36,14 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Gestión");
 
-        // Configuración del panel de clientes
         lblRut.setText("RUT:");
+
         lblCorreo.setText("Correo:");
+
         lblNombre.setText("Nombre:");
+
         lblApellidoP.setText("Apellido Paterno:");
+
         lblTelefono.setText("Número Teléfono:");
 
         btnGuardar.setText("Guardar");
@@ -79,7 +83,7 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(btnGuardar)
                         .addGap(18, 18, 18)
                         .addComponent(btnLimpiar)))
-                .addContainerGap(437, Short.MAX_VALUE))
+                .addContainerGap(543, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,12 +112,48 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnLimpiar))
-                .addContainerGap(482, Short.MAX_VALUE))
+                .addContainerGap(492, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Atención Cliente", jPanel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 887, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 757, Short.MAX_VALUE)
+        );
+
         jTabbedPane1.addTab("Servicios", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 887, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 757, Short.MAX_VALUE)
+        );
+
         jTabbedPane1.addTab("Gráficos", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 887, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 757, Short.MAX_VALUE)
+        );
+
         jTabbedPane1.addTab("Consultas", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -128,9 +168,10 @@ public class Home extends javax.swing.JFrame {
         );
 
         pack();
-    }
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-BEGIN:btnGuardarActionPerformed
         Connection conn = null;
         try {
             // Validar campos vacíos
@@ -167,11 +208,11 @@ public class Home extends javax.swing.JFrame {
         } finally {
             ConexionBd.closeConnection(conn);
         }
-    }
-    
-    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {
+    }//GEN-END:btnGuardarActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-BEGIN:btnLimpiarActionPerformed
         limpiarCampos();
-    }
+    }//GEN-END:btnLimpiarActionPerformed
     
     private void limpiarCampos() {
         txtRut.setText("");
@@ -199,23 +240,23 @@ public class Home extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnLimpiar;
-    private javax.swing.JLabel lblRut;
-    private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JLabel lblApellidoP;
-    private javax.swing.JLabel lblTelefono;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField txtRut;
+    private javax.swing.JLabel lblApellidoP;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblRut;
+    private javax.swing.JLabel lblTelefono;
+    private javax.swing.JTextField txtApellidoP;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtApellidoP;
+    private javax.swing.JTextField txtRut;
     private javax.swing.JTextField txtTelefono;
-    // End of variables declaration
+    // End of variables declaration//GEN-END:variables
 }
