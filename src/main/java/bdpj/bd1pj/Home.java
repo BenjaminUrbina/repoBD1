@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package bdpj.bd1pj;
-
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.category.DefaultCategoryDataset;
+//
 /**
  *
  * @author benjaminurbinarusque
@@ -15,6 +19,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+        agregarGrafico();
     }
 
     /**
@@ -32,7 +37,6 @@ public class Home extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
-        jSpinner1 = new javax.swing.JSpinner();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,17 +87,11 @@ public class Home extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(410, Short.MAX_VALUE)
-                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(409, 409, 409))
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(271, 271, 271)
-                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(459, Short.MAX_VALUE))
+            .addGap(0, 757, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Graficos", jPanel3);
@@ -166,8 +164,33 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
+private void agregarGrafico() {
+        // Crear dataset
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        dataset.addValue(5, "Ventas", "Enero");
+        dataset.addValue(7, "Ventas", "Febrero");
+        dataset.addValue(8, "Ventas", "Marzo");
+
+        // Crear el gráfico
+        JFreeChart barChart = ChartFactory.createBarChart(
+                "Ventas Mensuales", // Título
+                "Meses",            // Etiqueta de categoría
+                "Cantidad",         // Etiqueta de valores
+                dataset             // Datos
+        );
+
+        // Crear el panel del gráfico y agregarlo al jPanel3
+        ChartPanel chartPanel = new ChartPanel(barChart);
+        chartPanel.setBounds(0, 0, jPanel3.getWidth(), jPanel3.getHeight());
+        chartPanel.setVisible(true);
+
+        jPanel3.setLayout(null); // Usar layout nulo para posicionamiento manual
+        jPanel3.add(chartPanel);
+        jPanel3.repaint();
+    }
+
 }
+
