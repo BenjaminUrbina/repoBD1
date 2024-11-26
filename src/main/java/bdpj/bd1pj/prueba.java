@@ -31,7 +31,6 @@ public class prueba extends javax.swing.JPanel {
         Intervalo1 = new javax.swing.JTextField();
         Intervalo2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         Intervalo1.setText("Primera fecha");
         Intervalo1.addActionListener(new java.awt.event.ActionListener() {
@@ -47,28 +46,21 @@ public class prueba extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("Las fechas tienen que seguir el siguiente formato: yyyy-MM-dd");
-
-        jLabel2.setText("Ejemplo: 2024-11-30");
+        jLabel1.setText("Las fechas tienen que seguir el siguiente formato: yyyy-MM-dd Ejemplo: 2024-11-30");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(119, 119, 119)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
                         .addComponent(Intervalo1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94)
-                        .addComponent(Intervalo2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(jLabel2)))
-                .addContainerGap(495, Short.MAX_VALUE))
+                        .addComponent(Intervalo2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(486, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,9 +71,7 @@ public class prueba extends javax.swing.JPanel {
                     .addComponent(Intervalo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addContainerGap(343, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -110,6 +100,5 @@ public class prueba extends javax.swing.JPanel {
     private javax.swing.JTextField Intervalo1;
     private javax.swing.JTextField Intervalo2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
