@@ -54,17 +54,11 @@ public class Home extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         AtencionCliente = new javax.swing.JPanel();
         Servicios = new javax.swing.JPanel();
-        Consultas = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
         Graficos = new javax.swing.JPanel();
         OpcionesGrafico = new javax.swing.JComboBox<>();
         Graficar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        info1Grafico = new javax.swing.JLabel();
+        Info1GraficoB = new javax.swing.JLabel();
         PanelInfo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -108,60 +102,6 @@ public class Home extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Servicios", Servicios);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel1.setText("Consultas frecuentes");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel2.setText("Otras cosultas");
-
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1100, Short.MAX_VALUE)
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ConsultasLayout = new javax.swing.GroupLayout(Consultas);
-        Consultas.setLayout(ConsultasLayout);
-        ConsultasLayout.setHorizontalGroup(
-            ConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConsultasLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(ConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(ConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(89, 89, 89))
-            .addComponent(jDesktopPane1)
-        );
-        ConsultasLayout.setVerticalGroup(
-            ConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConsultasLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(ConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ConsultasLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ConsultasLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane1))
-        );
-
-        jTabbedPane1.addTab("Consultas", Consultas);
-
         OpcionesGrafico.setBackground(new java.awt.Color(255, 255, 255));
         OpcionesGrafico.setForeground(new java.awt.Color(0, 0, 0));
         OpcionesGrafico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona las opciones disponibles", "Graficar ganancias total del mes hasta el momento", "Graficar Ingreso por año", "Graficar ingresos por metodos de pago (Intervalo de tiempo dado)", " " }));
@@ -186,9 +126,9 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Opción 1");
+        info1Grafico.setText("Opción 1");
 
-        jLabel6.setText("Opción 1");
+        Info1GraficoB.setText("Opción 1");
 
         javax.swing.GroupLayout PanelInfoLayout = new javax.swing.GroupLayout(PanelInfo);
         PanelInfo.setLayout(PanelInfoLayout);
@@ -210,11 +150,11 @@ public class Home extends javax.swing.JFrame {
                 .addGap(127, 127, 127)
                 .addGroup(GraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(OpcionesGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(info1Grafico))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
                 .addGroup(GraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Graficar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(Info1GraficoB))
                 .addGap(93, 93, 93))
         );
         GraficosLayout.setVerticalGroup(
@@ -222,8 +162,8 @@ public class Home extends javax.swing.JFrame {
             .addGroup(GraficosLayout.createSequentialGroup()
                 .addContainerGap(195, Short.MAX_VALUE)
                 .addGroup(GraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel6))
+                    .addComponent(info1Grafico)
+                    .addComponent(Info1GraficoB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(GraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OpcionesGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -326,19 +266,13 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AtencionCliente;
     private javax.swing.JPanel BG;
-    private javax.swing.JPanel Consultas;
     private javax.swing.JButton Graficar;
     private javax.swing.JPanel Graficos;
+    private javax.swing.JLabel Info1GraficoB;
     private javax.swing.JComboBox<String> OpcionesGrafico;
     private javax.swing.JPanel PanelInfo;
     private javax.swing.JPanel Servicios;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel info1Grafico;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 
