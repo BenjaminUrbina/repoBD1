@@ -63,8 +63,6 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
-
         BG.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout BGLayout = new javax.swing.GroupLayout(BG);
