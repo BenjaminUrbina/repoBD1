@@ -37,8 +37,19 @@ public class Home extends javax.swing.JFrame {
 
     public Home() {
         initComponents();
-
-        //agregarGrafico(); 
+        
+        Electronicos panelElectronicos = new Electronicos();
+        // Buscar el índice de la pestaña "Atencion Cliente"
+        int clienteIndex = -1;
+        for (int i = 0; i < jTabbedPane1.getTabCount(); i++) {
+            if (jTabbedPane1.getTitleAt(i).equals("Atencion Cliente")) {
+                clienteIndex = i;
+                break;
+            }
+        }
+        if (clienteIndex != -1) {
+            jTabbedPane1.insertTab("Electronicos", null, panelElectronicos, null, clienteIndex + 1);  
+        }
     }
 
     /**
@@ -180,8 +191,10 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(BG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,9 +273,10 @@ public class Home extends javax.swing.JFrame {
             public void run() {
                 new Home().setVisible(true);
             }
+
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AtencionCliente;
     private javax.swing.JPanel BG;

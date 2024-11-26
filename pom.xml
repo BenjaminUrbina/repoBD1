@@ -7,14 +7,14 @@
     <artifactId>BD1PJ</artifactId>
     <version>version-0</version>
     <packaging>jar</packaging>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>bdpj.bd1pj.BD1PJ</exec.mainClass>
     </properties>
-    
+
     <dependencies>
         <!-- Dependencia de PostgreSQL -->
         <dependency>
@@ -22,7 +22,7 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.4</version>
         </dependency>
-        
+
         <!-- Dependencia de JFreeChart -->
         <dependency>
             <groupId>org.jfree</groupId>
